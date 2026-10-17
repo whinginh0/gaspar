@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dominando o Low Ticket</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              gold: {
+                100: '#FFFBE6', 
+                200: '#FFF1B8',
+                300: '#FFE58F', 
+                400: '#FFD000', // Base requested color
+                500: '#D4AD00', 
+                600: '#AD8B00', 
+                700: '#876C00', 
+                800: '#614D00',
+                900: '#3D3000',
+              },
+              dark: {
+                900: '#050505',
+                800: '#0A0A0A',
+                700: '#121212',
+                600: '#1C1C1C',
+              }
+            },
+            backgroundImage: {
+              // Updated to standard gradient based on #FFD000
+              // Starts at #FFD000 and goes to a slightly darker shade for depth
+              'gold-metallic': 'linear-gradient(180deg, #FFD000 0%, #E6BC00 100%)',
+              
+              // Mapped names
+              'gold-gradient': 'linear-gradient(180deg, #FFD000 0%, #E6BC00 100%)',
+              'gold-premium-text': 'linear-gradient(180deg, #FFD000 0%, #E6BC00 100%)',
+              
+              'gold-shine': 'linear-gradient(45deg, transparent 25%, rgba(255, 208, 0, 0.4) 50%, transparent 75%)',
+              'rich-dark': 'radial-gradient(circle at center, #1a1a1a 0%, #000000 100%)',
+              'gold-grid': 'linear-gradient(to right, rgba(255, 208, 0, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 208, 0, 0.1) 1px, transparent 1px)',
+            },
+            dropShadow: {
+              'metallic': '0 2px 4px rgba(0, 0, 0, 0.5)',
+              'gold-glow': '0 0 15px rgba(255, 208, 0, 0.4)',
+            },
+            animation: {
+              'shimmer': 'shimmer 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'text-shimmer': 'text-shimmer 4s ease-in-out infinite alternate',
+              'grid-move': 'grid-move 20s linear infinite',
+              'marquee': 'marquee 40s linear infinite', // Add marquee animation
+            },
+            keyframes: {
+              shimmer: {
+                '0%': { backgroundPosition: '200% 0' },
+                '100%': { backgroundPosition: '-200% 0' }
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              'text-shimmer': {
+                '0%': { backgroundPosition: '0% 50%' },
+                '100%': { backgroundPosition: '100% 50%' }
+              },
+              'grid-move': {
+                '0%': { backgroundPosition: '0 0' },
+                '100%': { backgroundPosition: '50px 50px' }
+              },
+              'marquee': {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-50%)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050505;
+        color: #e5e5e5;
+        overflow-x: hidden;
+      }
+      
+      /* Noise Texture Overlay */
+      .bg-noise {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 50;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #FFD000;
+      }
+      
+      .text-glow {
+        text-shadow: 0 0 30px rgba(255, 208, 0, 0.3);
+      }
+      
+      .bg-clip-text-anim {
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+    <script src="https://fast.wistia.com/player.js" async></script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+    <script src="https://fast.wistia.com/embed/qazkogwx24.js" async type="module"></script>
+  <script type="module" crossorigin src="/assets/index-Cql1fIyi.js"></script>
+</head>
+  <body>
+    <div class="bg-noise"></div>
+    <div id="root"></div>
+  </body>
+</html>
