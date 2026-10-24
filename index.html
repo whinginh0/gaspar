@@ -12,13 +12,25 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@500;600;700;800&display=swap"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=20261024-4" />
     <script src="https://fast.wistia.com/player.js" async></script>
     <script
-      src="https://fast.wistia.com/embed/qazkogwx24.js"
+      src="https://fast.wistia.com/embed/fdkox3vd8m.js"
       async
       type="module"
     ></script>
+    <style>
+      wistia-player[media-id="fdkox3vd8m"] {
+        aspect-ratio: 20 / 13 !important;
+      }
+      wistia-player[media-id="fdkox3vd8m"]:not(:defined) {
+        background: center / contain no-repeat
+          url("https://fast.wistia.com/embed/medias/fdkox3vd8m/swatch");
+        display: block;
+        filter: blur(5px);
+        padding-top: 65%;
+      }
+    </style>
   </head>
   <body>
     <a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -95,14 +107,30 @@
             <div class="frame glass">
               <div class="player">
                 <wistia-player
-                  media-id="qazkogwx24"
-                  aspect="1.7777777778"
+                  media-id="fdkox3vd8m"
+                  aspect="1.5384615384615385"
                 ></wistia-player>
               </div>
             </div>
           </div>
           <div class="hero__cta">
-            <a class="btn btn--lg" href="#offer">QUERO ACESSO IMEDIATO ↗</a>
+            <a class="btn btn--lg" href="#offer"
+              >QUERO ACESSO IMEDIATO
+              <svg
+                width="19"
+                height="19"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
             <div class="trust">
               <span
                 ><svg
@@ -533,14 +561,14 @@
               <figure class="gaspar-main-frame print print--now">
                 <img
                   class="portrait gaspar-portrait glass"
-                  src="imagens/gaspar-foto-principal.jpg?v=d73d9ca438"
+                  src="imagens/gaspar1.PNG"
                   alt="Gaspar Digital"
                   loading="lazy"
                 />
               </figure>
               <figure class="gaspar-secondary print print--kid glass">
                 <img
-                  src="imagens/gaspar-foto-secundaria.jpg"
+                  src="imagens/gaspar2.jpeg"
                   alt="Gaspar Digital em sua formatura"
                   loading="lazy"
                 />
@@ -842,8 +870,22 @@
                 <a
                   class="btn btn--lg"
                   href="https://pay.cakto.com.br/z9mjbmi_504285"
-                  >QUERO O CURSO COM OS BÔNUS ↗</a
-                >
+                  >QUERO O CURSO COM OS BÔNUS
+                  <svg
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
                 <div class="secure">
                   <span
                     ><svg
@@ -1031,8 +1073,22 @@
           </div>
           <div class="center">
             <a class="btn" href="#offer"
-              >Tirei minhas dúvidas, quero entrar! ↗</a
-            >
+              >Tirei minhas dúvidas, quero entrar!
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -1098,8 +1154,22 @@
             validado para X1.<br />R$ 247 à vista ou em até 12x no cartão.
           </p>
           <a class="btn btn--lg" href="#offer"
-            >QUERO ACESSO IMEDIATO ↗</a
-          >
+            >QUERO ACESSO IMEDIATO
+            <svg
+              width="19"
+              height="19"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
           <div class="trust">
             <span
               ><svg
@@ -1191,6 +1261,6 @@
         <p>© 2026 Dominando Low Ticket. Todos os direitos reservados.</p>
       </div>
     </footer>
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
