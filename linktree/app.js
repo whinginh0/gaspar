@@ -27,13 +27,13 @@ function resizeCanvas() {
 }
 
 function createParticles() {
-  const amount = Math.min(90, Math.max(30, Math.floor((window.innerWidth * window.innerHeight) / 17000)));
+  const amount = Math.min(130, Math.max(42, Math.floor((window.innerWidth * window.innerHeight) / 12000)));
   particles = Array.from({ length: amount }, (_, index) => ({
     x: Math.random() * window.innerWidth,
     y: Math.random() * window.innerHeight,
     radius: index % 7 === 0 ? Math.random() * 1.4 + .8 : Math.random() * .9 + .25,
-    speedX: reduceMotion ? 0 : (Math.random() - .5) * .09,
-    speedY: reduceMotion ? 0 : (Math.random() - .5) * .07,
+    speedX: reduceMotion ? 0 : (Math.random() - .5) * .18,
+    speedY: reduceMotion ? 0 : (Math.random() - .5) * .14,
     opacity: Math.random() * .35 + .08,
     gold: Math.random() > .36
   }));
