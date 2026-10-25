@@ -5,6 +5,7 @@ dist/
 .env.*
 !.env.example
 *.zip
+*.tar.gz
 *.mov
 linktree/node_modules/
 linktree/dist/
