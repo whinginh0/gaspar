@@ -434,7 +434,10 @@ footer .wrap{display:flex;flex-direction:column;justify-content:center;align-ite
 }
 @media(hover:hover) and (pointer:fine){.spot:hover::after{opacity:1}.mod:hover{transform:translateY(-10px) rotate(-1deg)}.mod:hover img{transform:scale(1.06)}.depo:hover{transform:scale(1.03)}.btn:hover{transform:translateY(-2px) scale(1.02)}}
 @media(prefers-reduced-motion:reduce){.notch__ln{transform:none!important}.notch__dot{opacity:1!important;transform:none!important}.btn::before{animation:none!important}[data-reveal]{opacity:1!important;transform:none!important;filter:none!important}}
-.card-offer .offer__head{padding-bottom:0;margin-bottom:0;border:0!important}
-.card-offer .price{border:0!important}
+.card-offer .offer__head{display:none!important}
+.card-offer .price{margin-top:0;padding-top:8px;border:0!important}
+.card-offer .price::before,.card-offer .price::after{content:none!important;display:none!important}
 .card-offer .items li{border-bottom:0!important}
-.card-offer .offer__head img{display:block;width:min(70%,320px)!important;height:auto!important;max-width:320px!important;max-height:none!important;margin:0 auto 24px!important;image-rendering:auto}
+.card-offer hr{display:none!important}
+.card-offer .offer-logo{display:block;width:min(62%,290px)!important;height:auto!important;max-width:290px!important;max-height:none!important;margin:0 auto!important;image-rendering:auto;filter:drop-shadow(0 0 22px rgba(255,208,0,.34))}
+.card-offer .price{position:relative;margin-top:0!important;padding-top:10px!important;border:0!important;background:none!important;box-shadow:none!important}
